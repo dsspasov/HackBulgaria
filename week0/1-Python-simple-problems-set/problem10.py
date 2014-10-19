@@ -1,10 +1,4 @@
 #problem10.py
-"""
-ls -vijdam vsi4ki papki
-hack izbiram nqkoq papki
-
-	compiliram python3 problem10.py
-"""
 from problem9 import mklist
 
 def is_number_balanced(n):
@@ -26,11 +20,12 @@ def is_number_balanced(n):
 		else:
 			return False
 def main():
-	b = is_number_balanced(28471)
-	if (b):
-		print("true")
-	else:
-		print("False")
+	print( is_number_balanced(28471) )
+#	b = is_number_balanced(28471)
+#	if (b):
+#		print("true")
+#	else:
+#		print("False")
 
 if __name__ == '__main__':
 	main()

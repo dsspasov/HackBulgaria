@@ -10,10 +10,11 @@ def prime_number_of_divisors(n):
 	else:
 		return False
 def main():
-	a = prime_number_of_divisors(8)
-	if (a):
-		print("True")
-	else:
-		print("False")
+	print (prime_number_of_divisors(8))
+#	a = prime_number_of_divisors(8)
+#	if (a):
+#		print("True")
+#	else:
+#		print("False")
 if __name__ == '__main__':
 	main()

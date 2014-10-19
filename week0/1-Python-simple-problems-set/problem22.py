@@ -12,10 +12,10 @@ def is_hack(n):
 	n+=1
 	while(not is_hacked(n)):
 		n+=1
-	print (n)
+	return n
 	
 def main():
-	is_hack(10)
+	print(is_hack(10))
 if __name__ == '__main__':
 	main()
 

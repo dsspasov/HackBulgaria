@@ -7,8 +7,9 @@ def sum_of_digits(n):
 		n=n//10
 	return sum
 def main():
-	x= sum_of_digits(1325132435356)
-	print(x)
+	print(sum_of_digits(1325132435356))
+#	x= sum_of_digits(1325132435356)
+#	print(x)
 
 if __name__ == '__main__':
 	main()

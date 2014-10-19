@@ -5,3 +5,7 @@ def count_consonants(str):
 		if char in "bcdfghjklmnpqrstvwxzBCDFGHJKLMNPQRSTWVXYZ":
 			count = count + 1
 	return count
+def main():
+    print (count_consonants('ababab'))
+if __name__ == '__main__':
+    main()

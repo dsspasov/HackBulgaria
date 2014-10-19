@@ -7,11 +7,10 @@ def iterations_of_nan_expand(expanded):
 	if (expanded==""):
 		return count
 	while flag:
-	    a = expanded.find(pattern,start)  # find() returns -1 if the word is not found, 
-	                                  #start i the starting index from the search starts(default value is 0)
-	    if a==-1:          #if pattern not found set flag to False
+	    a = expanded.find(pattern,start)
+	    if a==-1:          
 	        flag=False
-	    else:               # if word is found increase count and set starting index to a+1
+	    else:               
 	        count+=1        
 	        start=a+1
 	if(count>0):

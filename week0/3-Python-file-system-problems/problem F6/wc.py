@@ -28,7 +28,7 @@ def wc_print():
         print( words(file_name) )
     else:
         print( lines(file_name) )
-def main():
-    wc_print()
-if __name__ == '__main__':
-    main()
+#def main():
+#    wc_print()
+#if __name__ == '__main__':
+#    main()

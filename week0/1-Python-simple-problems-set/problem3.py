@@ -5,7 +5,8 @@ def sum_of_divisors(n):
 			sum +=x
 	return sum
 def main():
-	a = sum_of_divisors(7)
-	print(a)
+    print (sum_of_divisors(7))
+#	a = sum_of_divisors(7)
+#	print(a)
 if __name__ == '__main__':
 	main()

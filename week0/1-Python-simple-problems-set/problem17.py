@@ -6,10 +6,11 @@ def is_increasing(seq):
 	else:
 		return True
 def main():
-	a= is_increasing([5,6,-10])
-	if(a):
-		print("True")
-	else:
-		print("False")
+	print (is_increasing([5,6,-10]))
+#	a= is_increasing([5,6,-10])
+#	if(a):
+#		print("True")
+#	else:
+#		print("False")
 if __name__ == '__main__':
 	main()

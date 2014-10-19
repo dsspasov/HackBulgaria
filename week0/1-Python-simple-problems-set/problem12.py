@@ -5,3 +5,7 @@ def count_vowels(str):
 		if char in "aeiouyAEIOUY":
 			count = count+1
 	return count
+def main():
+    print (count_vowels('ababab'))
+if __name__ == '__main__':
+    main()

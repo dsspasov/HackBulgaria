@@ -6,8 +6,9 @@ def nth_fibonacci(n):
 	else:
 		return nth_fibonacci(n-1)+nth_fibonacci(n-2)
 def main():
-	x=nth_fibonacci(3)
-	print (x)
+    print (nth_fibonacci(3))
+#	x=nth_fibonacci(3)
+#	print (x)
 
 if __name__ == '__main__':
 	main()

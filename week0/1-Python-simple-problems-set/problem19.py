@@ -20,13 +20,13 @@ def zero_insertion(n):
 		else:
 			u.append(x[i+1])
 	k = list_to_number(u)
-	print(k)
-	#return k
+	#print(k)
+	return k
 
 def main():
 	#z=zero_insertion(5555)
 	#print(z)
-	zero_insertion(6446)
+	print(zero_insertion(6446))
 if __name__ == '__main__':
 	main()
 

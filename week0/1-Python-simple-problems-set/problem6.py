@@ -11,30 +11,13 @@ def sevens_in_a_row(arr,n):
 					flag = False
 				t-=1
 			if(t==0 and flag):
-				return True
-
-
-
-
-
-
-		"""	for y in range(x+1,x+n):#5,7
-				if arr[y]!=7:
-					flag = False
-				else:
-					flag = True
-			if flag:
-				return True
-	else:
-		return False"""
-
-
-	
+				return True	
 def main():
-	a = sevens_in_a_row([7,2,1,6,2], 1)
-	if (a):
-		print("True")
-	else:
-		print("False")
+	print (sevens_in_a_row([7,2,1,6,2], 1))
+#	a = sevens_in_a_row([7,2,1,6,2], 1)
+#	if (a):
+#		print("True")
+#	else:
+#		print("False")
 if __name__ == '__main__':
 	main()

@@ -15,11 +15,12 @@ def is_prime(n):
 				return True
 
 def main():
-	a = is_prime(4)
-	if (a):
-		print("True")
-	else:
-		print("False")
+	print(is_prime(4))
+#	a = is_prime(4)
+#	if (a):
+#		print("True")
+#	else:
+#		print("False")
 
 if __name__ == '__main__':
 	main()

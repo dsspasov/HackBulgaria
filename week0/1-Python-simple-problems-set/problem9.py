@@ -15,10 +15,11 @@ def contains_digits(number, digits):
 	else:
 		return True
 def main():
-	a = contains_digits(456,[])
-	if(a):
-		print("True")
-	else:
-		print("False")
+	print(contains_digits(456,[]))
+#	a = contains_digits(456,[])
+#	if(a):
+#		print("True")
+#	else:
+#		print("False")
 if __name__ == '__main__':
 	main()

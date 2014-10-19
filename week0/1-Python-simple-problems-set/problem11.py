@@ -20,7 +20,8 @@ def counting_substrings(heystack,needle):
 		return False
 
 def main():
-	x= counting_substrings("This is a test string", "is")
-	print(x)
+	print( counting_substrings("This is a test string", "is") )
+#	x= counting_substrings("This is a test string", "is")
+#	print(x)
 if __name__ == '__main__':
 	main()

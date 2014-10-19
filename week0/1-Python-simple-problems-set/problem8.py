@@ -7,10 +7,11 @@ def contains_digit(number,digit):
 	else:
 		return False
 def main():
-	a= contains_digit(1234,4)
-	if(a):
-		print("True")
-	else:
-		print("False")
+	print (contains_digit(1234,4))
+#	a= contains_digit(1234,4)
+#	if(a):
+#		print("True")
+#	else:
+#		print("False")
 if __name__ == '__main__':
 	main()

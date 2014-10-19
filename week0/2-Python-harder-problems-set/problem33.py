@@ -24,10 +24,10 @@ def is_an_bn(word):
     else:
         return False
 
-def main():
+#def main():
     #is_an_bn("")
-    print(is_an_bn("aabb"))
+#    print(is_an_bn("aabb"))
     #is_an_bn("aabbb")
     #is_an_bn("raabb")
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+#    main()

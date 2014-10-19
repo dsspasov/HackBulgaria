@@ -6,7 +6,6 @@ def number_to_list(n):
 		n = n//10
 	return new_list[::-1]
 def main():
-	x=[]
 	x = number_to_list(123023)
 	print (x)
 if __name__ == '__main__':
