@@ -1,0 +1,21 @@
+{
+    "songs": [
+        {
+            "length": 60,
+            "title": "Sweet Child O' Mine [September 1988]",
+            "rating": 5,
+            "bitrate": 192083,
+            "artist": "Guns N' Roses",
+            "album": "Appetite for Destruction"
+        },
+        {
+            "length": 336,
+            "title": "Knockin' On Heaven's Door",
+            "rating": 5,
+            "bitrate": 64003,
+            "artist": "Guns N' Roses",
+            "album": "Greatest Hits"
+        }
+    ],
+    "name": "myPlaylist"
+}

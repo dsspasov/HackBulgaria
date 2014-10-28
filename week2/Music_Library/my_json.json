@@ -1,0 +1,21 @@
+{
+    "songs": [
+        {
+            "title": "Sweet Child O'mine",
+            "rating": 5,
+            "album": "Appetite for Destruction",
+            "length": 360,
+            "artist": "Guns N' Roses",
+            "bitrate": 320
+        },
+        {
+            "title": "Sweet",
+            "rating": 2,
+            "album": "Appetite for Destruction1",
+            "length": 306,
+            "artist": "Guns N' Roses",
+            "bitrate": 120
+        }
+    ],
+    "name": "MyPlaylist"
+}

@@ -1,12 +1,12 @@
 # cat.py
 import sys
 
-def cat (filename):
+
+def cat(filename):
     file = open(filename, "r")
     content = file.read()
     file.close()
     return content
-    
 
 #def main():
 #    filename = sys.argv[1]
