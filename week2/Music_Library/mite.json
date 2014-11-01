@@ -1,0 +1,13 @@
+{
+    "songs": [
+        {
+            "artist": "b",
+            "album": "c",
+            "length": 360,
+            "bitrate": 100,
+            "title": "a",
+            "rating": 2
+        }
+    ],
+    "name": "az"
+}
