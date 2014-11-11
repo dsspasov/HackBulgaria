@@ -5,55 +5,51 @@ class manage_company:
 
     def __init__(self):
         self.connection = sqlite3.connect('mydb')
-        # self.cursor = self.connection.cursor()
+        self.connection.row_factory = sqlite3.Row
+        self.cursor = self.connection.cursor()
 
     def list_employees(self):
-        self.connection.row_factory = sqlite3.Row
-        cursor = self.connection.cursor()
-        result = cursor.execute("SELECT id,name, position FROM users")
-        # result_fetched = result.fetchall()
+        #self.connection.row_factory = sqlite3.Row
+        #cursor = self.connection.cursor()
+        result = self.cursor.execute("SELECT id,name, position FROM users")
         for row in result:
             print("{} - {} - {}".format(row['id'], row['name'], row['position']))
         self.connection.commit()
 
     def monthly_spending(self):
-        self.connection.row_factory = sqlite3.Row
-        cursor = self.connection.cursor()
-        result = cursor.execute(
-            "SELECT SUM(\"monthly_salary\") AS total_spend_for_month FROM users")
+        #self.connection.row_factory = sqlite3.Row
+        #cursor = self.connection.cursor()
+        result = self.cursor.execute(
+            "SELECT SUM(\"monthly_salary\") AS spend_for_month FROM users")
         total_expenditure = result.fetchone()
         self.connection.commit()
-        return total_expenditure['total_spend_for_month']
-        # print(total_expenditure['total_spend_for_month'])
+        return total_expenditure['spend_for_month']
 
     def yearly_spending(self):
-        self.connection.row_factory = sqlite3.Row
-        cursor = self.connection.cursor()
-        result = cursor.execute("SELECT SUM(\"yearly_bonus\") AS total_spend_for_year FROM users")
-        total_year_bonus = result.fetchone()
+        #self.connection.row_factory = sqlite3.Row
+        #cursor = self.connection.cursor()
+        result = self.cursor.execute("SELECT SUM(\"yearly_bonus\") AS spend_for_year FROM users")
+        year_bonuses = result.fetchone()
         self.connection.commit()
-        return (self.monthly_spending() + total_year_bonus['total_spend_for_year'])
-        # print(r['total_spend_for_year'])
+        return (self.monthly_spending() + year_bonuses['spend_for_year'])
 
     def add_employee(self, name, monthly_salary, yearly_bonus, position):
-        cursor = self.connection.cursor()
-        cursor.execute('''INSERT INTO users(name, monthly_salary, yearly_bonus, position)
+        #cursor = self.connection.cursor()
+        self.cursor.execute('''INSERT INTO users(name, monthly_salary, yearly_bonus, position)
                           VALUES(?,?,?,?)''', (name, monthly_salary, yearly_bonus, position))
         self.connection.commit()
 
     def delete_employee(self, id):
-        cursor = self.connection.cursor()
-        string = " DELETE FROM users Where id ={}".format(id)
-        cursor.execute(string)
+        #cursor = self.connection.cursor()
+        self.cursor.execute(" DELETE FROM users Where id = ?", (id,))
         self.connection.commit()
 
     def update_employee(self, id, name, monthly_salary, yearly_bonus, position):
-        cursor = self.connection.cursor()
-
-        cursor.execute('''UPDATE users SET name = ?, monthly_salary = ?, yearly_bonus = ?, position = ? WHERE id = ? ''',
-                       (name, monthly_salary, yearly_bonus, position, id))
+        #cursor = self.connection.cursor()
+        self.cursor.execute('''UPDATE users SET name = ?, monthly_salary = ?,
+                         yearly_bonus = ?, position = ? WHERE id = ? ''',
+                            (name, monthly_salary, yearly_bonus, position, id))
         self.connection.commit()
-        # cursor.execute(string)
 
     def option(self):
         print("enter help")
@@ -62,14 +58,14 @@ class manage_company:
             command = input("Command>")
             command = command.split(" ")
             if command[0] == "help":
-                print('''    help
-    finish
-    list_employees
-    monthly_spending
-    yearly_spending
-    add_employee
-    delete_employee <id>
-    update_emplyee <id>''')
+                print('''      help
+        finish
+        list_employees
+        monthly_spending
+        yearly_spending
+        add_employee
+        delete_employee <id>
+        update_emplyee <id>''')
             if command[0] == "finish":
                 print("FINISH")
                 break
