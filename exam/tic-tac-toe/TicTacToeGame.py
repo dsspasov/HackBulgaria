@@ -1,7 +1,7 @@
 import random
 
 
-class GameLogic:
+class GameTicTacToe:
 
     def __init__(self):
         self.board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
@@ -114,10 +114,11 @@ class GameLogic:
             self.printBoard()
         self.printBoard()
 
+
 def main():
 
-    board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
-    game = GameLogic()
+#    board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    game = GameTicTacToe()
     game.main()
 
 if __name__ == '__main__':
